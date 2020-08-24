@@ -20,10 +20,10 @@ jobs:
     steps:
       - checkout
       - run: echo "A more familiar hi"  
-      - run: cat my_workspace/echo-output
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: my_workspace
+      - run: cat my_workspace/echo-output
 workflows:
   version: 2
   one_and_two:
